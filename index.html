@@ -63,26 +63,41 @@
         
         <form>
             <fieldset>
-                <legend>Baking Preferences</legend>
-                <label for="favorite_dessert">Favorite Dessert:</label>
-                <input type="text" id="favorite_dessert" name="favorite_dessert">
-                <br>
-                <label for="baking_experience">Baking Experience:</label>
-                <select id="baking_experience" name="baking_experience">
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                </select>
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <br>
-                <label for="comments">Additional Comments:</label>
-                <textarea id="comments" name="comments"></textarea>
-                <br>
-                <input type="submit" value="Submit">
-            </fieldset>
-        </form>
+        <legend>Personal questions</legend>
+        <label for="name">Please enter your name</label>
+        <input type="text" id="name" name="Please enter your name"><br>
+        <label for="join-fellowship-yes">Are you interested in joining the club?</label><br>
+        <input type="radio" name="join-fellowship" id="join-fellowship-yes" value="Yes">Yes<br>
+        <input type="radio" name="join-fellowship" id="join-fellowship-no" value="No">No<br>
+        <label for="inquirydate">Enter the date of your feedback submission:</label><br>
+        <input type="date" id="inquirydate" name="inquirydate">
+      </fieldset>
+      <fieldset>
+        <legend>Feedback specific questions</legend>
+        <label for="feedback-choices">Select one of the following:</label><br>
+        <select id="feedback-choices">
+            <option value="Very satisfied!">Very satisfied!</option>
+            <option value="Somewhat satisfied.">Somewhat satisfied.</option>
+            <option value="Neither here nor there.">Neither here nor there.</option>
+            <option value="Vaguely dissatisfied.">Vaguely dissatisfied.</option>
+            <option value="Extremely dissatisfied.">Extremely dissatisfied.</option>
+        </select><br>
+        <input type="checkbox" name="confirmation:" id="checkbox" value="I have read the meeting notes.">I have read the meeting notes.<br>
+        <label for="feedback-multiselect">Please select one that applies:</label><br>
+        <input list="feedback-multisel" id="feedback-multiselect" name="feedback">
+        <datalist id="feedback-multisel">
+            <option value="1">The information provided is inaccurate.</option>
+            <option value="2">My opinions were misrepresented by these notes (I am an attendee of the Council).</option>
+            <option value="3">I love how detailed the minutes were.</option>
+            <option value="4">I think that this should be better structured.</option>
+            <option value="5">I don't know, I'm just here for the vibes.</option>
+        </datalist><br>
+        <label for="message">Optional: Enter other feedback:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+      </fieldset>
+      <button type="submit">Submit!</button>
+    </form>
+    <hr>
     </footer>
 
     <hr>
